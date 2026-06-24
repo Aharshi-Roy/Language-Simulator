@@ -1,5 +1,5 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/aharshiroy/Documents/LanguageSimulator/main'
+binary-path:     '/Users/aharshiroy/Documents/Language-Simulator/main'
 relocations:     []
 ...
