@@ -2,9 +2,16 @@
 #include <vector>
 using namespace std;
 
-class Area
+string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+class Agent
 {
 
+};
+
+class Area
+{
+    int food = 0;
+    vector<int> agents;
 };
 
 class Region
@@ -25,10 +32,32 @@ class Sim
         vector<vector<Region>> regions;
 
         Sim() : regions(REGION_X, vector<Region>(REGION_Y)) {}
+
+        void output()
+        {
+            for (int i = 0; i < REGION_Y; i++)
+            {
+                for (int j = 0; j < REGION_X; j++)
+                {
+                    cout << alphabet[i*REGION_X+j];
+                    if (j != REGION_X-1) cout << "-";
+                }
+                if (i != REGION_Y-1)
+                {
+                    cout << endl;
+                    for (int j = 0; j < REGION_X; j++)
+                    {
+                        cout << "|";
+                        if (j != REGION_X-1) cout << " ";
+                    }
+                    cout << endl;
+                }
+            }
+        }
 };
 
 int main()
 {
     Sim simulation;
-    cout << simulation.regions[0][0].areas.size();
+   simulation.output();
 }
