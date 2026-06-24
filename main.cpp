@@ -2,29 +2,33 @@
 #include <vector>
 using namespace std;
 
+class Area
+{
+
+};
+
+class Region
+{
+    public:
+        const int AREA_X = 4;
+        const int AREA_Y = 4;
+        vector<vector<Area>> areas;
+
+        Region() : areas(AREA_X, vector<Area>(AREA_Y)) {}
+};
+
 class Sim
 {
     public:
-        const int BOARD_X = 4;
-        const int BOARD_Y = 4;
-        vector<vector<int>> board;
+        const int REGION_X = 4;
+        const int REGION_Y = 4;
+        vector<vector<Region>> regions;
 
-        Sim()
-        {
-            for (int i = 0; i < BOARD_X; i++)
-            {
-                vector<int> row;
-                for (int j = 0; j < BOARD_Y; j++)
-                {
-                    row.push_back(0);
-                }
-                board.push_back(row);
-            }
-        }
+        Sim() : regions(REGION_X, vector<Region>(REGION_Y)) {}
 };
 
 int main()
 {
     Sim simulation;
-    cout << simulation.board[0].size();
+    cout << simulation.regions[0][0].areas.size();
 }
