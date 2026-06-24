@@ -1,0 +1,18 @@
+There is a map, with 16 regions.
+Each region has 16 areas
+
+AREAS:
+Have an array of agents
+Have an amount of food
+
+REGIONS:
+Must generate food in areas
+Facilitate bot transport between Areas
+
+MAP:
+Must decide region travel possobility
+Must decide region food spawn.
+Facilitte bot transport between regions.
+
+AGENT:
+Has a list of words.
